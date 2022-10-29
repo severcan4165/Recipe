@@ -1,0 +1,7 @@
+
+729cb6811ead0fa9946909da75941584	—
+
+
+62e033a5
+
+https://api.edamam.com/api/recipes/v2?type=any&beta=false&q=${query}&app_id=${appID}&app_key=${appKey}&mealType=${mealType}
