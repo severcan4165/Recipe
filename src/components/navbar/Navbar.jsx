@@ -1,6 +1,6 @@
 import React from 'react'
-
-import Nav, { StyledLink } from './Style'
+import cook from "../../assets/cooking.png";
+import Nav, { StyledImg, StyledLink } from './Style'
 
 // import home from "../../assets/home.svg";
 // import coding from "../../assets/coding.svg";
@@ -13,10 +13,15 @@ import Nav, { StyledLink } from './Style'
 const Navbar = () => {
   return (
     <Nav>
-
-        <StyledLink to="/">Home</StyledLink>
-        <StyledLink to="/about">About</StyledLink>
-        {/* <StyledLink to="logout">Log Out</StyledLink> */}
+        <div>
+          <StyledImg src={cook} alt="cook" />
+        </div>
+        <div> 
+            <StyledLink to="/">Home</StyledLink>
+            <StyledLink to="/about">About</StyledLink>
+            <StyledLink to="/login">Log Out</StyledLink>
+        </div>
+   
     </Nav>
   )
 }

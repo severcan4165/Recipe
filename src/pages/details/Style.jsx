@@ -1,25 +1,54 @@
 import styled from 'styled-components';
+import ff from "../../assets/ed.jpg"
 
 const Card = styled.div`
   
-background: rgb(149,240,96);
-background: linear-gradient(286deg, rgba(149,240,96,0.989233193277311) 0%, rgba(251,214,169,1) 100%);
+
+height:88vh;
+background-image:url(${ff}) ;
+background-repeat: no-repeat;
+
+background-size: cover;
   padding:2rem;
   display:flex;
-  gap:3rem;
+ 
   justify-content:center;
   align-items:center;
   flex-direction:row;
 
   
 `;
+export const Card1 = styled.div`
+padding:4rem;
+background: rgb(175,168,168);
+background: radial-gradient(circle, rgba(30,30,30,0.7) 0%, rgba(20,20,20,0.7) 100%);
+
+width:450px;
+height:420px;
+font-size:1.3rem;
+line-height:1.2;
+`;
+
 export const Card2 = styled.div`
-width:350px;
-height:400px;
+padding:4rem;
+background: rgb(175,168,168);
+background: radial-gradient(circle, rgba(30,30,30,0.7) 0%, rgba(20,20,20,0.7) 100%);
+
+width:450px;
+height:420px;
 font-size:1.3rem;
 line-height:1.2;
 
    
+`;
+export const Card3 = styled.div`
+display:flex;
+ border-radius:1rem;
+height:auto;
+ overflow:hidden;
+justify-content:center;
+align-items:center;
+flex-direction:row;
 `;
 
 export const Image = styled.img`

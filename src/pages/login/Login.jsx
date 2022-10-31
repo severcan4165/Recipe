@@ -6,6 +6,7 @@ import AppRouter from '../../router/AppRouter';
 
 
 import PrivateRouter from '../../router/PrivateRouter';
+import StyledDiv, { StyledButton, StyledForm, StyledInput } from './Style.styled';
 
 
 const Login = ({setIsLogin}) => {
@@ -34,12 +35,16 @@ const handleLog = (e) => {
  
 
   return (
-    <div>
-      <h1>Login Page</h1>
-      <input onChange={handleChange} type="text"  id="name"/>
-      <input onChange={handleChange} type="password" id="password" />
-      <button onClick={handleLog}>Sign In</button>
-    </div>
+    <StyledDiv>
+      <StyledForm>
+          <h1>Login Page</h1>
+          <StyledInput onChange={handleChange} type="text"  id="name" placeholder='Username'/>
+          <StyledInput onChange={handleChange} type="password" id="password"  placeholder='Password'/>
+          <StyledButton onClick={handleLog}>Sign In</StyledButton>
+      </StyledForm>
+    
+     
+    </StyledDiv>
   )
 }
 

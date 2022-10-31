@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import me from "../../assets/47.jpg"
+
 
 
 const Card = styled.div`
@@ -30,14 +32,16 @@ export const Image = styled.img`
 width:300px;
 height:300px;
 object-fit: cover;
-border-radius:0.3rem
+border-radius:0.3rem;
 
    
 `;
 
 export const FlexContainer = styled.div`
-background-color: #eee;
+background: ${({flag})=> flag ? "radial-gradient(circle, rgba(30,30,30,0.7) 0%, rgba(20,20,20,0.7) 100%)" :""};
+background: ${({flag})=> flag ? "rgb(175,168,168)" :""};
 width:100vw;
+
 height:auto;
 display:flex;
 gap: 2rem;
@@ -59,6 +63,36 @@ margin-top: 1rem;
 color:white;
 font-size:1.1rem;
 `;
+export const StyledDiv = styled.div`
+width: 100%;
+
+
+
+background-image: ${({flag})=> flag ? "" :`url(${me})`}; 
+
+background: ${({flag})=> flag ? "radial-gradient(circle, rgba(30,30,30,0.7) 0%, rgba(20,20,20,0.7) 100%)" :""};
+background: ${({flag})=> flag ? "rgb(175,168,168)" :""};
+background-repeat: no-repeat;
+background-size: cover;
+display: flex;
+flex-direction: ${({flag})=> flag ? "column" :"row"};
+justify-content: center;
+align-items: center;
+
+`;
+
+export const FlagDiv = styled.div`
+  height:${({flag})=> flag ? "20vh": "88vh"};
+  width: 50vw;
+  margin:1rem 0;
+  
+  overflow:hidden;
+`;
+export const FlagDiv2 = styled.div`
+
+  height:${({flag})=> flag ? "auto": ""};
+`;
+
 
 
 export default Card;
